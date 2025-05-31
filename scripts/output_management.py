@@ -401,13 +401,13 @@ def save_multi_view_visualizations(lidar_points, radar_points, annotations,
             # 设置轴范围
             if view_name == 'top_view':
                 # 鸟瞰图：调整Z轴范围以突出俯视效果
-                ax.set_xlim([-max_distance, max_distance])
-                ax.set_ylim([-max_distance, max_distance])
+                ax.set_xlim([max_distance, -max_distance])
+                ax.set_ylim([max_distance, -max_distance])
                 ax.set_zlim([-2, 8])
             elif view_name == 'front_view':
                 # 前视图：聚焦前方区域
                 ax.set_xlim([0, max_distance])
-                ax.set_ylim([-max_distance/2, max_distance/2])
+                ax.set_ylim([max_distance/2, -max_distance/2])
                 ax.set_zlim([-3, 10])
             else:
                 # 侧视图：保持原始范围
