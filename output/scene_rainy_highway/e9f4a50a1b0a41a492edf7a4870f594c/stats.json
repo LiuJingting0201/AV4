@@ -1,0 +1,12 @@
+{
+  "sample_token": "e9f4a50a1b0a41a492edf7a4870f594c",
+  "n_lidar": 6,
+  "n_radar": 6,
+  "lidar_points": 223378,
+  "radar_points": 2710,
+  "box_count": 62,
+  "max_distance": 50.0,
+  "lidar_path": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\merged_lidar.ply",
+  "radar_path": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\merged_radar.ply",
+  "processed_at": "2025-05-31T19:29:59.703448"
+}

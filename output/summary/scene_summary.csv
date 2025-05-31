@@ -1,0 +1,12 @@
+,lidar_points,lidar_points,lidar_points,radar_points,radar_points,box_count,box_count
+,count,sum,mean,sum,mean,sum,mean
+scene_name,,,,,,,
+scene_bridge_city,2,471068,235534.0,5681,2840.5,184,92.0
+scene_clear_city,2,519150,259575.0,5153,2576.5,166,83.0
+scene_construction,2,486919,243459.5,6608,3304.0,135,67.5
+scene_night_highway,2,450060,225030.0,6967,3483.5,62,31.0
+scene_overcast_city,2,471068,235534.0,5681,2840.5,184,92.0
+scene_rainy_highway,2,447810,223905.0,5385,2692.5,130,65.0
+scene_snow_city,2,432279,216139.5,6139,3069.5,127,63.5
+scene_terminal_area,2,476632,238316.0,9257,4628.5,72,36.0
+scene_twilight,2,519150,259575.0,5153,2576.5,166,83.0

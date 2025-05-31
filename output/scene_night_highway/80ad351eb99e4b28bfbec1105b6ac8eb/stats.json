@@ -1,0 +1,12 @@
+{
+  "sample_token": "80ad351eb99e4b28bfbec1105b6ac8eb",
+  "n_lidar": 6,
+  "n_radar": 6,
+  "lidar_points": 226751,
+  "radar_points": 3463,
+  "box_count": 31,
+  "max_distance": 50.0,
+  "lidar_path": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\80ad351eb99e4b28bfbec1105b6ac8eb\\merged_lidar.ply",
+  "radar_path": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\80ad351eb99e4b28bfbec1105b6ac8eb\\merged_radar.ply",
+  "processed_at": "2025-05-31T19:29:57.455317"
+}

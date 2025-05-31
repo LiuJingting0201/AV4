@@ -1,0 +1,12 @@
+{
+  "sample_token": "1eb6c0c7adad4cf29e8da13dcf8ef16b",
+  "n_lidar": 6,
+  "n_radar": 6,
+  "lidar_points": 234950,
+  "radar_points": 2658,
+  "box_count": 94,
+  "max_distance": 50.0,
+  "lidar_path": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\merged_lidar.ply",
+  "radar_path": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\merged_radar.ply",
+  "processed_at": "2025-05-31T19:30:12.519064"
+}

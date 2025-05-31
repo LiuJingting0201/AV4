@@ -6,6 +6,7 @@ TruckScenes 传感器融合可视化工具 - 修复版本
 2. 修正图例：显示融合后的传感器数据，而非单个传感器
 3. 修复坐标轴标签显示问题
 4. LiDAR点云按距离着色（而非高度）
+5. 添加return_data参数支持批量处理
 """
 
 import numpy as np
@@ -76,13 +77,14 @@ class TruckScenesVisualizer:
         
         return SimpleTruckScenes(self.dataroot, self.version)
     
-    def visualize_sample(self, sample_token: str, max_distance: float = 50.0):
+    def visualize_sample(self, sample_token: str, max_distance: float = 50.0, return_data: bool = False):
         """
         可视化指定样本的传感器融合数据
         
         Args:
             sample_token: 样本token
             max_distance: 最大显示距离
+            return_data: 是否返回数据用于批量处理
         """
         print(f"可视化样本: {sample_token}")
         
@@ -126,10 +128,48 @@ class TruckScenesVisualizer:
         annotations = self._get_sample_annotations(sample_token)
         
         # 可视化
-        self._create_visualization(
+        fig, total_lidar_points, total_radar_points, box_count = self._create_visualization(
             merged_lidar, merged_radar, annotations, 
             sample_token, max_distance, len(lidar_sensors), len(radar_sensors)
         )
+
+        # 准备返回结果
+        result = {
+            # --- 可视化图片 ---
+            "fig": fig,                            # matplotlib figure对象（管理脚本可以直接保存为png）
+            "visualization_path": None,            # 可选，图片实际保存路径（如果直接保存）
+            
+            # --- 点云数据 ---
+            "merged_lidar": merged_lidar,          # numpy数组 (N,3)
+            "merged_radar": merged_radar,          # numpy数组 (M,3)
+            "lidar_path": None,                    # 可选，lidar点云文件保存路径
+            "radar_path": None,                    # 可选，radar点云文件保存路径
+            
+            # --- 三维框等目标注释 ---
+            "annotations": annotations,            # list，每个元素为标注框（中心、尺寸、旋转、类别等dict）
+
+            # --- 统计信息（用于后续csv/全局分析/自动画图） ---
+            "stats": {
+                "sample_token": sample_token,          # 当前帧唯一标识
+                "n_lidar": len(lidar_sensors),         # 使用的lidar传感器数量
+                "n_radar": len(radar_sensors),         # 使用的radar传感器数量
+                "lidar_points": int(len(merged_lidar)) if merged_lidar is not None else 0,
+                "radar_points": int(len(merged_radar)) if merged_radar is not None else 0,
+                "box_count": int(len(annotations)) if annotations is not None else 0,
+                "max_distance": max_distance,          # 可视化最大距离参数
+                # 可扩展：天气、场景、时间戳、特定传感器名称等
+            },
+            
+            # --- 日志信息（如有异常/告警可补充） ---
+            "log": []                               # 可为list，收集运行时的异常、警告、状态
+        }
+        
+        # 根据参数决定是否返回数据
+        if return_data:
+            return result
+        else:
+            # 原有的显示逻辑
+            plt.show()
     
     def _get_sensor_data(self, sample_data_token: str):
         """获取传感器数据和姿态信息"""
@@ -271,9 +311,9 @@ class TruckScenesVisualizer:
                 r_ego = r_ego_transform * r_global
                 
                 ego_ann = {
-                    'translation': center_ego,
+                    'translation': center_ego.tolist(),  # 转换为list以便JSON序列化
                     'size': ann['size'],
-                    'rotation': r_ego,
+                    'rotation': r_ego.as_quat().tolist(),  # 转换为list
                     'category_name': ann['category_name']
                 }
                 ego_annotations.append(ego_ann)
@@ -288,6 +328,7 @@ class TruckScenesVisualizer:
         
         # 处理LiDAR点云
         total_lidar_points = 0
+        scatter_lidar = None
         if len(lidar_points) > 0:
             # 距离过滤
             distances = np.linalg.norm(lidar_points[:, :2], axis=1)
@@ -323,12 +364,14 @@ class TruckScenesVisualizer:
         # 绘制3D标注框
         box_count = 0
         for ann in annotations:
-            center = ann['translation']
+            center = np.array(ann['translation'])
             distance = np.linalg.norm(center[:2])
             
             if distance <= max_distance * 1.2:
+                # 重建旋转对象
+                rotation = R.from_quat(ann['rotation'])
                 corners = self._get_box_corners(
-                    center, ann['size'], ann['rotation']
+                    center, ann['size'], rotation
                 )
                 self._draw_3d_box(ax, corners)
                 
@@ -358,8 +401,8 @@ class TruckScenesVisualizer:
         ax.set_zlim([-5, 15])
         
         # 添加距离颜色条（修复：距离而非高度）
-        if total_lidar_points > 0:
-            cbar = plt.colorbar(scatter_lidar, ax=ax, label='DiantanceFromSensors [m]', shrink=0.6)
+        if total_lidar_points > 0 and scatter_lidar is not None:
+            cbar = plt.colorbar(scatter_lidar, ax=ax, label='DistanceFromSensors [m]', shrink=0.6)
             cbar.ax.tick_params(labelsize=10)
         
         # 添加图例（修复位置和样式）
@@ -375,7 +418,6 @@ class TruckScenesVisualizer:
         ax.view_init(elev=25, azim=45)
         
         plt.tight_layout()
-        plt.show()
         
         # 输出统计信息
         print(f"\n=== 可视化统计 ===")
@@ -387,6 +429,8 @@ class TruckScenesVisualizer:
         print(f"显示范围: {max_distance}m")
         print("✓ Radar 360°覆盖正常（6个传感器提供全方位检测）")
         print("✓ 点云颜色表示距离传感器的距离")
+        
+        return fig, total_lidar_points, total_radar_points, box_count
     
     def _get_box_corners(self, center, size, rotation):
         """计算3D标注框的8个角点"""
