@@ -6,7 +6,32 @@
   "radar_points": 2658,
   "box_count": 94,
   "max_distance": 50.0,
-  "lidar_path": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\merged_lidar.ply",
-  "radar_path": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\merged_radar.ply",
-  "processed_at": "2025-05-31T19:30:12.519064"
+  "view_paths": {
+    "side_view": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\visualizations\\side_view.png",
+    "front_view": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\visualizations\\front_view.png",
+    "top_view": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\visualizations\\top_view.png"
+  },
+  "interactive_3d_path": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\visualizations\\interactive_3d.html",
+  "camera_images": {
+    "CAMERA_LEFT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\front_left_camera.jpg",
+    "CAMERA_RIGHT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\front_right_camera.jpg",
+    "CAMERA_LEFT_BACK": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\back_left_camera.jpg",
+    "CAMERA_RIGHT_BACK": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\back_right_camera.jpg"
+  },
+  "lidar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\data\\merged_lidar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\data\\merged_lidar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\data\\merged_lidar.csv"
+  },
+  "radar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\data\\merged_radar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\data\\merged_radar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\data\\merged_radar.csv"
+  },
+  "camera_config_path": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\visualizations\\camera_config.json",
+  "output_structure": {
+    "visualizations": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\visualizations",
+    "data": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b\\data",
+    "main": "D:\\MyProjects\\AV4\\output\\scene_bridge_city\\1eb6c0c7adad4cf29e8da13dcf8ef16b"
+  }
 }

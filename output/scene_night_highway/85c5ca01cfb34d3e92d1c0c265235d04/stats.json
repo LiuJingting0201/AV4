@@ -6,7 +6,32 @@
   "radar_points": 3504,
   "box_count": 31,
   "max_distance": 50.0,
-  "lidar_path": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\merged_lidar.ply",
-  "radar_path": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\merged_radar.ply",
-  "processed_at": "2025-05-31T19:29:58.492609"
+  "view_paths": {
+    "side_view": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\visualizations\\side_view.png",
+    "front_view": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\visualizations\\front_view.png",
+    "top_view": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\visualizations\\top_view.png"
+  },
+  "interactive_3d_path": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\visualizations\\interactive_3d.html",
+  "camera_images": {
+    "CAMERA_LEFT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\front_left_camera.jpg",
+    "CAMERA_RIGHT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\front_right_camera.jpg",
+    "CAMERA_LEFT_BACK": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\back_left_camera.jpg",
+    "CAMERA_RIGHT_BACK": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\back_right_camera.jpg"
+  },
+  "lidar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\data\\merged_lidar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\data\\merged_lidar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\data\\merged_lidar.csv"
+  },
+  "radar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\data\\merged_radar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\data\\merged_radar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\data\\merged_radar.csv"
+  },
+  "camera_config_path": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\visualizations\\camera_config.json",
+  "output_structure": {
+    "visualizations": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\visualizations",
+    "data": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04\\data",
+    "main": "D:\\MyProjects\\AV4\\output\\scene_night_highway\\85c5ca01cfb34d3e92d1c0c265235d04"
+  }
 }

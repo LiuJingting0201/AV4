@@ -1,0 +1,44 @@
+{
+  "views": {
+    "side_view": {
+      "elevation": 25,
+      "azimuth": 45,
+      "description": "General overview from side angle"
+    },
+    "front_view": {
+      "elevation": 0,
+      "azimuth": 0,
+      "description": "Driver perspective looking forward"
+    },
+    "top_view": {
+      "elevation": 90,
+      "azimuth": 0,
+      "description": "Bird's eye view from above"
+    }
+  },
+  "display_limits": {
+    "max_distance": 50.0,
+    "x_range": [
+      -50.0,
+      50.0
+    ],
+    "y_range": [
+      -50.0,
+      50.0
+    ],
+    "z_range": [
+      -5,
+      15
+    ]
+  },
+  "rendering_settings": {
+    "lidar_point_size": 0.8,
+    "radar_point_size": 25,
+    "downsample_threshold": 30000,
+    "figure_size": [
+      16,
+      12
+    ],
+    "dpi": 150
+  }
+}

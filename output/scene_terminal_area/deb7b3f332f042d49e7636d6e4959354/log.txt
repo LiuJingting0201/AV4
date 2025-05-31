@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "D:\MyProjects\AV4\Scripts\output_management.py", line 38, in process_sample
-    result = visualizer.visualize_sample(sample_token, max_distance=50.0, return_data=True)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: TruckScenesVisualizer.visualize_sample() got an unexpected keyword argument 'return_data'

@@ -6,7 +6,32 @@
   "radar_points": 3132,
   "box_count": 64,
   "max_distance": 50.0,
-  "lidar_path": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\merged_lidar.ply",
-  "radar_path": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\merged_radar.ply",
-  "processed_at": "2025-05-31T19:30:04.843055"
+  "view_paths": {
+    "side_view": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\visualizations\\side_view.png",
+    "front_view": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\visualizations\\front_view.png",
+    "top_view": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\visualizations\\top_view.png"
+  },
+  "interactive_3d_path": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\visualizations\\interactive_3d.html",
+  "camera_images": {
+    "CAMERA_LEFT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\front_left_camera.jpg",
+    "CAMERA_RIGHT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\front_right_camera.jpg",
+    "CAMERA_LEFT_BACK": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\back_left_camera.jpg",
+    "CAMERA_RIGHT_BACK": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\back_right_camera.jpg"
+  },
+  "lidar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\data\\merged_lidar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\data\\merged_lidar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\data\\merged_lidar.csv"
+  },
+  "radar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\data\\merged_radar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\data\\merged_radar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\data\\merged_radar.csv"
+  },
+  "camera_config_path": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\visualizations\\camera_config.json",
+  "output_structure": {
+    "visualizations": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\visualizations",
+    "data": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011\\data",
+    "main": "D:\\MyProjects\\AV4\\output\\scene_snow_city\\9d75f3c77f384353b5477c981fb46011"
+  }
 }

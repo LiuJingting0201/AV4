@@ -6,7 +6,32 @@
   "radar_points": 2710,
   "box_count": 62,
   "max_distance": 50.0,
-  "lidar_path": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\merged_lidar.ply",
-  "radar_path": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\merged_radar.ply",
-  "processed_at": "2025-05-31T19:29:59.703448"
+  "view_paths": {
+    "side_view": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\visualizations\\side_view.png",
+    "front_view": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\visualizations\\front_view.png",
+    "top_view": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\visualizations\\top_view.png"
+  },
+  "interactive_3d_path": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\visualizations\\interactive_3d.html",
+  "camera_images": {
+    "CAMERA_LEFT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\front_left_camera.jpg",
+    "CAMERA_RIGHT_FRONT": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\front_right_camera.jpg",
+    "CAMERA_LEFT_BACK": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\back_left_camera.jpg",
+    "CAMERA_RIGHT_BACK": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\back_right_camera.jpg"
+  },
+  "lidar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\data\\merged_lidar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\data\\merged_lidar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\data\\merged_lidar.csv"
+  },
+  "radar_files": {
+    "txt": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\data\\merged_radar.txt",
+    "ply": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\data\\merged_radar.ply",
+    "csv": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\data\\merged_radar.csv"
+  },
+  "camera_config_path": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\visualizations\\camera_config.json",
+  "output_structure": {
+    "visualizations": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\visualizations",
+    "data": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c\\data",
+    "main": "D:\\MyProjects\\AV4\\output\\scene_rainy_highway\\e9f4a50a1b0a41a492edf7a4870f594c"
+  }
 }
